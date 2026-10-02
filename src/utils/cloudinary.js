@@ -14,7 +14,7 @@ const uploadOnCloudinary= async(localFilePath) =>{
         resource_type:"auto",
         folder:"vtube"
     })
-    fs.unlinkSync(localFilePath) // Delete the local file after successful upload
+    // fs.unlinkSync(localFilePath) // Delete the local file after successful upload
     console.log("File uploaded to Cloudinary:", response)
     return response
   } catch (error) {
@@ -23,4 +23,6 @@ const uploadOnCloudinary= async(localFilePath) =>{
     return null
   }
 }
+
+export default uploadOnCloudinary
 
